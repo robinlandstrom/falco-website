@@ -118,15 +118,12 @@
 
     * `enabled: [true|false]`
     * `listen_port`
-    * `k8s_audit_endpoint`
     * `ssl_enabled: [true|false]`
     * `ssl_certificate: <path>`
   description: |
     If `enabled` is set to `true`, Falco will start an embedded web server to accept Kubernetes audit events.
 
     `listen_port` specifies the port on which the web server will listen. The default is 8765.
-
-    `k8s_audit_endpoint` specifies the URI on which to listen for Kubernetes audit events. The default is `/k8s-audit`.
 
     `ssl_enabled` enables SSL support for the webserver, using the certificate specified in `ssl_certificate`. The specified `ssl_certificate` file should contain the server's certificate as well as the key as [documented by civitweb](https://github.com/civetweb/civetweb/blob/master/docs/OpenSSL.md#creating-a-self-signed-certificate).
 - name: grpc
